@@ -4,9 +4,8 @@ var Mongo = require('mongodb'),
     _     = require('lodash');
 
 function Treasure(o){
-  this.name     = o.name;
-  this.lat      = parseFloat(o.lat);
-  this.lng      = parseFloat(o.lng);
+  this.tname    = o.tname;
+  this.loc      = {lname: o.lname, lat: parseFloat(o.lat), lng: parseFloat(o.lng)};
   this.hint     = o.hint;
   this.diff     = o.diff;
   this.photo    = o.photo;

@@ -1,0 +1,31 @@
+extends ../shared/template
+block content
+  .row
+    h2 Add a Treasure
+  .row
+    form.form-horizontal(role='form', method='post', action='/treasures')
+      input#lat(type='hidden', name='lat')
+      input#lng(type='hidden', name='lng')
+      .col-xs-5
+        .form-group
+          label(for='tname') Treasure Name
+          input.form-control#tname(type='text', name='tname', placeholder='gold',autofocus='true')
+        .form-group
+          label(for='loc') Location Name
+          input.form-control#loc(type='test', name='loc', placeholder='Dublin, Ireland')
+        .form-group
+          label(for='hint') Hint
+          input.form-control#hint(type='textarea', name='hint', placeholder='fly to Ireland, use GPS')
+      .col-xs-2
+      .col-xs-5
+        .form-group
+          label(for='photo') Photo
+          input.form-control#photo(type='file', name='photo')
+        .form-group
+          label(for='diff') Difficulty
+          input.form-control#diff(type='text', name='diff', placeholder='easy')
+        button.btn.btn-primary(type='submit') Add treasure map
+
+
+block scripts
+  script(src='/js/user/init.js')
