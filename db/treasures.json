@@ -1,0 +1,30 @@
+{
+  "_id":{"$oid":"000000000000000000000001"},
+  "name":"gold",
+  "lat":53.321,
+  "lng":-6.267,
+  "hint":"fly to Ireland, use GPS",
+  "diff":"easy",
+  "photo":"img/gold.jpg"
+}
+
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"diamonds",
+  "lat":66.761,
+  "lng":124.123,
+  "hint":"fly to Russia, find largest diamond mine",
+  "diff":"medium",
+  "photo":"img/diamonds.jpg"
+}
+
+{
+  "_id":{"$oid":"000000000000000000000003"},
+  "name":"music",
+  "lat":36.167,
+  "lng":-86.783,
+  "hint":"take the bus to downtown Nashville, walk around",
+  "diff":"hard",
+  "photo":"img/music.jpg"
+}
+
