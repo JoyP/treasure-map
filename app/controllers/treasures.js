@@ -1,6 +1,7 @@
 'use strict';
 
-var Treasure = require('../models/treasure');
+var Treasure  = require('../models/treasure'),
+    mp        = require('multiparty');
 
 exports.index = function(req, res){
   Treasure.all(function(err, treasures){
@@ -13,8 +14,13 @@ exports.init = function(req,res){
 };
 
 exports.create = function(req, res){
-  Treasure.create(req.body, function(){
-    res.redirect('/treasures');
+  var form = new mp.Form();
+  form.parse(req, function(err, fields, file){
+    Treasure.create(fields, function(err, newTreasure){
+      newTreasure.uploadPhoto(file, function(){
+        res.redirect('/treasures');
+      });
+    });
   });
 };
 
