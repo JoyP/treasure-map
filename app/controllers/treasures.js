@@ -15,7 +15,9 @@ exports.init = function(req,res){
 
 exports.create = function(req, res){
   var form = new mp.Form();
+  console.log('req in controller.create:', req);
   form.parse(req, function(err, fields, file){
+    console.log('fields in controller:', fields);
     Treasure.create(fields, function(err, newTreasure){
       newTreasure.uploadPhoto(file, function(){
         res.redirect('/treasures');

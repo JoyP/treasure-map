@@ -20,6 +20,7 @@ Object.defineProperty(Treasure, 'collection', {
 });
 
 Treasure.create = function(fields, cb){
+  console.log(fields);
   var t = new Treasure(fields);
   Treasure.collection.save(t, cb);
   return(t);

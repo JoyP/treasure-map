@@ -1,7 +1,9 @@
 {
   "_id":{"$oid":"000000000000000000000001"},
+  "lat":53.321,
+  "lng":-6.267,
   "tname":"gold",
-  "loc":{"lname":"Dublin, Ireland","lat":53.321,"lng":-6.267},
+  "lname":"Dublin, Ireland",
   "hint":"fly to Ireland, use GPS",
   "diff":"easy",
   "photo":"img/gold.jpg"
@@ -9,8 +11,10 @@
 
 {
   "_id":{"$oid":"000000000000000000000002"},
+  "lat":66.761,
+  "lng":124.123,
   "tname":"diamonds",
-  "loc":{"lname":"Sakha, Russia","lat":66.761,"lng":124.123},
+  "lname":"Sakha, Russia",
   "hint":"fly to Russia, find largest diamond mine",
   "diff":"medium",
   "photo":"img/diamonds.jpg"
@@ -19,7 +23,9 @@
 {
   "_id":{"$oid":"000000000000000000000003"},
   "tname":"music",
-  "loc":{"lname":"Nashville, Tennessee","lat":36.167,"lng":-86.783},
+  "lname":"Nashville, Tennessee",
+  "lat":36.167,
+  "lng":-86.783,
   "hint":"take the bus to downtown Nashville, walk around",
   "diff":"hard",
   "photo":"img/music.jpg"

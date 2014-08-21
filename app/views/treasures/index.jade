@@ -1,6 +1,25 @@
 extends ../shared/template
 block content
 
+  .row
+    .col-xs-12
+      #map
+  .row
+    .col-xs-12
+      table.table
+        thead
+          tr
+            th Treasure
+            th Location
+            th Difficulty
+            th Found?
+        tbody
+          each treasure in treasures
+            tr(data-name=treasure.lname, data-lat=treasure.lat, data-lng=treasure.lng)
+              td: a(href= '/treasures/#{treasure._id}')= treasure.tname
+              td= treasure.lname
+              td= treasure.diff
+              td ?
 
 block scripts
   script(src='/js/user/treasures.js')
