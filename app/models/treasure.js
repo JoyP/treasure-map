@@ -13,6 +13,7 @@ function Treasure(o){
   this.hint     = o.hint[0];
   this.diff     = o.diff[0];
   this.image    = '';
+  this.found    = false;
 }
 
 Object.defineProperty(Treasure, 'collection', {
@@ -46,6 +47,10 @@ Treasure.prototype.uploadPhoto = function(photo, cb){
   fs.renameSync(photo.photo[0].path, abs);
   this.image = abs;
   Treasure.collection.save(this, cb);
+};
+
+Treasure.prototype.toggleFound = function(){
+  this.found = !this.found;
 };
 
 module.exports = Treasure;

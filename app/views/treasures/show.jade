@@ -1,5 +1,22 @@
 extends ../shared/template
 block content
 
+  .row
+    #treasureName(data-tname=treasure.tname)
+    .col-xs-6
+      #map
+    .col-xs-6
+      .row
+        .col-xs-12
+          .page-header: h1= treasure.tname
+          .treasurePhoto: img(src='#{treasure.photo}')
+  .row
+    #treasureHint(data-hint=treasure.hint)
+    .col-xs-6
+      h1 Hint
+      .hint= treasure.hint
+    .col-xs6
+      button.btn.btn-success#found(type= 'button') Found It!
+
 block scripts
   script(src='/js/user/show.js')

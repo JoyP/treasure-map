@@ -25,9 +25,8 @@
       var name  = results[0].formatted_address,
           lat   = results[0].geometry.location.lat(),
           lng   = results[0].geometry.location.lng();
-      debugger;
       console.log('this is lat:', lat);
-      console.lng('this is lng:', lng);
+      console.log('this is lng:', lng);
 
       $('#lname').val(name);
       $('#lat').val(lat);
